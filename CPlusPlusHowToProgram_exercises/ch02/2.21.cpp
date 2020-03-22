@@ -6,5 +6,11 @@ using namespace std; // program uses names from the std namespace
 int main() {
     cout << "  CCC   +\t+\n"
     << " C      +\t+\n"
-    << "C     +++++"
+    << "C     +++++   +++++\n"
+    << " C      +\t+\n"
+    << "  CCC   +\t+" << endl;
+    
+    cout << static_cast<int>('A') << endl;// print 'A' as an integer
+
+    return 0;
 }
