@@ -24,17 +24,18 @@ int main() {
     smallest = number1;
     largest = number1;
 
-    if (number1 > number2) {
+    if (number1 >= number2) {
         smallest = number2;
-        if (number2 > number3) {
-            smallest = number3;
-        }
     }
-    else {
+    
+    if (number2 >= number3) {
+        smallest = number3;
+    }
+    if (number1 <= number2){
         largest = number2;
-        if (number2 < number3) {
-            largest = number3;
-        }
+    }
+    if (number2 <= number3) {
+        largest = number3;
     }
     
     cout << "Sum is " << sum << endl; // display sum; end line
