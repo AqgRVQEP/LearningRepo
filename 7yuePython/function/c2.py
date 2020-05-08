@@ -14,6 +14,7 @@ def add(x, y):
 
 def print_code(code):
     print(code)
+    return
 
 a = add(1, 2)
 b = print_code('Python')
