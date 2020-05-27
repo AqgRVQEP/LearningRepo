@@ -44,8 +44,10 @@
       printf( "%s", "Enter the miles driven: " ); // prompt for input
       scanf( "%d", &mile ); // read grade from user
 
-      average = (float)mile / gallon; // avoid truncation
-      printf("The miles/gallon for this tank was: %.6f\n", average);
+      if (gallon != -1) {
+          average = (float)mile / gallon; // avoid truncation
+          printf("The miles/gallon for this tank was: %.6f\n", average);
+      }
 
       // loop while sentinel value not yet read from user
       while ( gallon != -1 ) {
