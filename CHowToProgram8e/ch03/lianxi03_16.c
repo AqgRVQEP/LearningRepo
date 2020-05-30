@@ -41,31 +41,26 @@
       printf( "%s", "Enter the gallons used (-1 to end): " ); // prompt for input
       scanf( "%f", &gallon ); // read grade from user
 
-      printf( "%s", "Enter the miles driven: " ); // prompt for input
-      scanf( "%d", &mile ); // read grade from user
+      while ( gallon != -1 ) {
+         printf( "%s", "Enter the miles driven: " ); // prompt for input
+         scanf( "%d", &mile ); // read grade from user
 
-      if (gallon != -1) {
-          average = (float)mile / gallon; // avoid truncation
-          printf("The miles/gallon for this tank was: %.6f\n", average);
-      }
+         if (gallon != 0) {
+            average = (float)mile / gallon; // avoid truncation
+        }
+            printf("The miles/gallon for this tank was: %.6f\n", average);
+       
 
       // loop while sentinel value not yet read from user
-      while ( gallon != -1 ) {
-          total_gallon = total_gallon + gallon; // add grade to total
-          total_mile = total_mile + mile;
-          counter = counter + 1; // increment counter
+     
+            total_gallon = total_gallon + gallon; // add grade to total
+            total_mile = total_mile + mile;
+            counter = counter + 1; // increment counter
 
           // get next grade from user
           printf( "%s", "Enter the gallons used (-1 to end): " ); // prompt for input
           scanf( "%f", &gallon ); // read grade from user
-
-          if (gallon != -1) {
-              printf("%s", "Enter the miles driven: "); // prompt for input
-              scanf("%d", &mile); // read grade from user
-
-              average = (float)mile / gallon; // avoid truncation
-              printf("The miles/gallon for this tank was: %.6f\n", average);
-          }
+         
       } // end while
 
       // termination phase
@@ -76,7 +71,7 @@
           total_average = ( float ) total_mile / total_gallon; // avoid truncation
 
           // display average with two digits of precision
-          printf( "The miles/gallon for this tank was: %.6f\n", total_average );
+          printf( "\nThe overage miles/gallon was: %.6f", total_average );
       } // end if
       else { // if no grades were entered, output message
           puts( "No gallons and miles were entered" );
