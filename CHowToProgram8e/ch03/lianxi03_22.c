@@ -11,7 +11,7 @@ int main( void )
    
    // processing phase
    while ( counter <= 10 ) { // loop 10 times
-      printf( "%d   ", counter++); // prompt for input
+      printf( "%u   ", counter++); // prompt for input
    } // end while
 } // end function main
 

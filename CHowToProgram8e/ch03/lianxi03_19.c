@@ -45,7 +45,7 @@ int main( void )
         scanf( "%f", &rate ); // read grade from user
 
         printf( "%s", "Enter term of the loan in days: " ); // prompt for input
-        scanf( "%d", &days ); // read grade from user
+        scanf( "%u", &days ); // read grade from user
 
         interest = principal * rate * days / 365; // avoid truncation
         
